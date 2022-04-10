@@ -1,0 +1,21 @@
+main: com.tndt.PluginMain
+name: bukkit-groovy
+version: 1.0
+author: Adam Kis (aregic@gmail.com)
+description: Run groovy scripts from paper
+api-version: 1.18
+commands:
+  gx:
+    description: Execute a groovy script
+    usage: /gx
+  gxall:
+    description: Reload all groovy scripts
+    usage: /gxall
+  gxunloadall:
+    description: Unload all groovy scripts
+    usage: /gxunloadall
+  gxunload:
+    description: Unload a groovy script
+    usage: /gxunload
+#  permission: bukkit-groovy.execute
+#  permission-message: You don't have the bukkit-groovy.execute permission.
