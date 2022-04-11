@@ -52,7 +52,8 @@ methods (e.g. SQL) if you need a persistent variable.
 
 ## Loading and reloading scripts
 
-You can load a script from a client by using the /xg command:
+Loading / unloading scripts require the `minecraft.command.debug` permission. Loading scripts
+can be done via the `gx` user command:
 
 ```
 /gx my_script.groovy
@@ -82,3 +83,10 @@ results in a warning, but for this plugin it causes an error, see
 
 Event handler functions that don't return void are unsupported, so it's a good practice
 anyway - for this plugin it's a necessity.
+
+
+### Don't put a folder among the scripts that's name ends with '.groovy'
+
+Due to a weird java bug I cannot filter out folders from the list of paths to be loaded by groovy, but only 
+ones that ends with '.groovy' will be loaded, so if you put a folder like `something.groovy` inside the
+plugin will try to execute it as a script - probably won't work.

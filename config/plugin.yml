@@ -8,14 +8,20 @@ commands:
   gx:
     description: Execute a groovy script
     usage: /gx
+    permission: minecraft.command.debug
+    permission-message: You don't have the minecraft.command.debug permission.
   gxall:
     description: Reload all groovy scripts
     usage: /gxall
+    permission: minecraft.command.debug
+    permission-message: You don't have the minecraft.command.debug permission.
   gxunloadall:
     description: Unload all groovy scripts
     usage: /gxunloadall
+    permission: minecraft.command.debug
+    permission-message: You don't have the minecraft.command.debug permission.
   gxunload:
     description: Unload a groovy script
     usage: /gxunload
-#  permission: bukkit-groovy.execute
-#  permission-message: You don't have the bukkit-groovy.execute permission.
+    permission: minecraft.command.debug
+    permission-message: You don't have the minecraft.command.debug permission.
