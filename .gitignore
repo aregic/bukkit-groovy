@@ -1,2 +1,5 @@
 .idea
 target
+
+# these go into a separate repository
+scripts

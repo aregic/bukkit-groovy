@@ -1,7 +1,7 @@
 main: com.tndt.PluginMain
 name: bukkit-groovy
 version: 1.0
-author: Adam Kis (aregic@gmail.com)
+author: Regic (aregic@gmail.com)
 description: Run groovy scripts from paper
 api-version: 1.18
 commands:
@@ -23,5 +23,10 @@ commands:
   gxunload:
     description: Unload a groovy script
     usage: /gxunload
+    permission: minecraft.command.debug
+    permission-message: You don't have the minecraft.command.debug permission.
+  gxc:
+    description: Execute a command in a script. Script name must be passed as first parameter.
+    usage: /gxc
     permission: minecraft.command.debug
     permission-message: You don't have the minecraft.command.debug permission.

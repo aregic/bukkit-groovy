@@ -10,19 +10,37 @@
     <version>1</version>
 
     <repositories>
-        <!-- This adds the Spigot Maven repository to the build -->
         <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+            <id>purpur</id>
+            <url>https://repo.purpurmc.org/snapshots</url>
+        </repository>
+        <repository>
+            <id>enginehub-maven</id>
+            <url>https://maven.enginehub.org/repo/</url>
+        </repository>
+        <repository>
+            <id>repository</id>
+            <url>file:${user.home}/.m2/repository</url>
         </repository>
     </repositories>
-
     <dependencies>
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.18.1-R0.1-SNAPSHOT</version>
+            <groupId>org.purpurmc.purpur</groupId>
+            <artifactId>purpur-server</artifactId>
+            <version>1.18.2-R0.1-SNAPSHOT</version>
+            <classifier>mojang-mapped</classifier>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.sk89q.worldedit</groupId>
+            <artifactId>worldedit-bukkit</artifactId>
+            <version>7.2.0-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.purpurmc.purpur</groupId>
+            <artifactId>purpur-api</artifactId>
+            <version>1.19.2-R0.1-SNAPSHOT</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.jetbrains/annotations -->
         <dependency>
@@ -30,6 +48,12 @@
             <artifactId>annotations</artifactId>
             <version>23.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.bstats</groupId>
+            <artifactId>bstats-bukkit</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
         <!--
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
@@ -44,6 +68,22 @@
             <artifactId>groovy-all</artifactId>
             <version>3.0.10</version>
             <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.30</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
+            <version>1.8.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-engine</artifactId>
+            <version>1.8.2</version>
         </dependency>
     </dependencies>
 

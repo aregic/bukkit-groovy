@@ -1,0 +1,1 @@
+Remove delayed removal of session, can break things

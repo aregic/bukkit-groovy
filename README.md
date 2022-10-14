@@ -87,6 +87,7 @@ anyway - for this plugin it's a necessity.
 
 ### Don't put a folder among the scripts that's name ends with '.groovy'
 
-Due to a weird java bug I cannot filter out folders from the list of paths to be loaded by groovy, but only 
-ones that ends with '.groovy' will be loaded, so if you put a folder like `something.groovy` inside the
-plugin will try to execute it as a script - probably won't work.
+Due to a weird java bug I cannot filter out folders from the list of paths to be loaded by 
+groovy, but only ones that ends with '.groovy' will be loaded, so if you put a folder like 
+`something.groovy` inside the plugin will try to execute it as a script - probably won't 
+work.
