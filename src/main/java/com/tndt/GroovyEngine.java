@@ -4,9 +4,8 @@ import groovy.lang.*;
 import groovy.util.GroovyScriptEngine;
 import groovy.util.ResourceException;
 import groovy.util.ScriptException;
-import org.apache.commons.lang.exception.ExceptionUtils;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.bukkit.Bukkit;
-import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.PluginLogger;
@@ -38,6 +37,7 @@ public class GroovyEngine {
         }
         scripts = new HashMap<>();
         commandScripts = new HashMap<>();
+        customCommands = new HashMap<>();
     }
 
     public void loadAllScripts() {
@@ -58,8 +58,12 @@ public class GroovyEngine {
     }
 
     public void unloadAllScripts() {
-        for(String s: scripts.keySet())
-            unloadScript(s);
+        if (scripts != null) {
+            for (String s : scripts.keySet()) {
+                scripts.get(s).onUnload(javaPlugin);
+            }
+            scripts.clear();
+        }
     }
 
     public void unloadScript(String name) {
@@ -164,6 +168,7 @@ public class GroovyEngine {
     private final HashMap<String, LoadableScript> scripts;
     private final HashMap<String, ScriptCommandExecutor> commandScripts;
     private final JavaPlugin javaPlugin;
+    private final HashMap<String, ScriptCommandExecutor> customCommands;
 
     final private static String scriptsFolder = "scripts/";
 }

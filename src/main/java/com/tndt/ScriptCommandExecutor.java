@@ -8,4 +8,5 @@ public interface ScriptCommandExecutor {
                       @NotNull String commandName,
                       @NotNull String[] args,
                       @NotNull String scriptName);
+    //void addCommands();
 }
