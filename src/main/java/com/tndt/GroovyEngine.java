@@ -28,7 +28,7 @@ public class GroovyEngine {
         groovyClassLoader =  new GroovyClassLoader(javaPlugin.getClass().getClassLoader());
         String[] paths = {scriptsFolder};
         try {
-            groovyScriptEngine = new GroovyScriptEngine(paths);
+            groovyScriptEngine = new GroovyScriptEngine(paths, groovyClassLoader);
             Bukkit.getLogger().info("Groovy script engine loaded.");
         } catch (IOException e) {
             groovyScriptEngine = null;
